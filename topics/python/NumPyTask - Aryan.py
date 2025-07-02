@@ -4,6 +4,9 @@
 # Q3: Create an 8x8 NumPy array with a chessboard pattern (alternating 0s and 1s), where the top-left element is 0.
 
 import numpy as np
+
+# --------------------
+
 a = np.array([
     [3,8,6,4,8],
     [4,5,6,10,6],
@@ -14,9 +17,13 @@ a = np.array([
 a_processed = a - np.mean(a,axis=1,keepdims=True)
 print(a_processed)
 
+# --------------------
+
 sample = np.arange(1,1001)
 b = sample[(sample % 3 == 0) & (sample % 7 == 0) & (sample % 5 != 0)]
 print(b)
+
+# --------------------
 
 chessboard = np.zeros((8,8), dtype=int)
 chessboard[::2,1::2] = 1
